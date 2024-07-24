@@ -12,9 +12,9 @@ import jakarta.persistence.Table;
 public class PersonalInformation{
 	
 	private int id;
-	private String firstname;
-	private String lastname;
-	private String middlename;
+	private String firstName;
+	private String lastName;
+	private String middleName;
 	private String gender;
 	
 	
@@ -25,37 +25,37 @@ public class PersonalInformation{
 
 	public PersonalInformation(String firstName, String lastName, String middleName, String gender) {
 		super();
-		this.firstname = firstName;
-		this.lastname = lastName;
-		this.middlename = middleName;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.middleName = middleName;
 		this.gender = gender;
 	}
 	
 	@Column(name = "firstname", length = 255)
 	public String getFirstName() {
-		return firstname;
+		return firstName;
 	}
 	
 	public void setFirstName(String firstName) {
-		this.firstname = firstName;
+		this.firstName = firstName;
 	}
 	
 	@Column(name = "lastname", length = 255)
 	public String getLastName() {
-		return lastname;
+		return lastName;
 	}
 	
 	public void setLastName(String lastName) {
-		this.lastname = lastName;
+		this.lastName = lastName;
 	}
 	
 	@Column(name = "middlename", length = 255)
 	public String getMiddleName() {
-		return middlename;
+		return middleName;
 	}
 	
 	public void setMiddleName(String middleName) {
-		this.middlename = middleName;
+		this.middleName = middleName;
 	}
 	
 	@Column(name = "gender", length = 255)

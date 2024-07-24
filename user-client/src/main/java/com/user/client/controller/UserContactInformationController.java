@@ -37,6 +37,9 @@ public class UserContactInformationController {
 		ModelAndView mav = new ModelAndView();
 		session = request.getSession();
 		
+		int userID = (int) session.getAttribute("userID");
+		
+		contactInfo.setId(userID);
 		userService.addContactInfo(contactInfo);
 		
 		session.setAttribute("contactInfo", contactInfo);

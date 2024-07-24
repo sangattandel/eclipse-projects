@@ -37,6 +37,9 @@ public class UserBankInformationController {
 		ModelAndView mav = new ModelAndView();
 		session = request.getSession();
 		
+		int userID = (int) session.getAttribute("userID");
+		bankInfo.setId(userID);
+		
 		userService.addBankInfo(bankInfo);
 		
 		session.setAttribute("bankInfo", bankInfo);

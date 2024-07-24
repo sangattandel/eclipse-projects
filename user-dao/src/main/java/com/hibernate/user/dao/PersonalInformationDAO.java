@@ -8,7 +8,7 @@ import com.hibernate.user.util.HibernateUtil;
 
 public class PersonalInformationDAO {
 
-	public void createPersonalInformation(PersonalInformation personalInformation) {
+	public PersonalInformation createPersonalInformation(PersonalInformation personalInformation) {
 		
 		Session session = null;
 		Transaction tx = null;
@@ -21,10 +21,9 @@ public class PersonalInformationDAO {
 			tx.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			
-			session.close();
-		}
+		} 
+		
+		return personalInformation;
 		
 	}
 	

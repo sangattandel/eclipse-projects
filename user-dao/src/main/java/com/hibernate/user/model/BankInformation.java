@@ -26,7 +26,9 @@ public class BankInformation {
 		this.accountNumber = accountNumber;
 		this.ssn = ssn;
 	}
-	
+
+
+
 	@Column(name = "bankname", length = 255)
 	public String getBankName() {
 		return bankName;

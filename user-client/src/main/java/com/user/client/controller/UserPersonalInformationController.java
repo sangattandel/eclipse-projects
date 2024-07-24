@@ -37,8 +37,10 @@ public class UserPersonalInformationController {
 		ModelAndView mav = new ModelAndView();
 		session = request.getSession();
 			
-		userService.addPersonalInfo(personalInfo);
-		session.setAttribute("personalInfo", personalInfo);
+		PersonalInformation addPersonalInfo = userService.addPersonalInfo(personalInfo);
+		session.setAttribute("userID", addPersonalInfo.getId());
+		System.out.println(addPersonalInfo.getId());
+		session.setAttribute("personalInfo", addPersonalInfo);
 				
 		mav.setViewName("contactInfo");
 		return mav;
