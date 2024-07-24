@@ -27,9 +27,10 @@ public class PersonalInformationRestController {
 	}
 	
 	@PostMapping("/add")
-	public void addPersonalInfo(@RequestBody PersonalInformation personalInfo ) {
+	public PersonalInformation addPersonalInfo(@RequestBody PersonalInformation personalInfo ) {
 		
-		personalInfoDAO.createPersonalInformation(personalInfo);
+		PersonalInformation savedPersonalInfo = personalInfoDAO.createPersonalInformation(personalInfo);
+		return savedPersonalInfo;
 	}
 	
 	@PutMapping("/update/{id}")
